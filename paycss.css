@@ -1,0 +1,306 @@
+/* General Body and Global Styles */
+body {
+    background-color:#000000;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Arial", sans-serif;
+    width: 100%; 
+    margin: 0; 
+    padding: 0; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100vw;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #002bb8;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+/* Payment Container Styles */
+.payment-container {
+    width: 100%; /* Ensure it takes full width of the parent container */
+    max-width: 1000px; /* Increased width */
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out;
+    text-align: center;
+    min-height: 600px; /* Increase the minimum length (height) here */
+}
+
+.card-icons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card-icons label {
+    margin: 0 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card-icons i {
+    font-size: 50px;
+    margin-bottom: 5px;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+    color: #000000;
+}
+
+.card-icons input[type="radio"] {
+    display: none;
+}
+
+.card-icons input[type="radio"]:checked + i {
+    opacity: 1;
+    color: green;
+}
+
+/* Card Details Section */
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card-details .form-group {
+    flex: 1;
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Form Input Fields */
+.form-group input[type="text"], 
+.form-group input[type="tel"], 
+.form-group input[type="number"] {
+    width: 100%; 
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    text-align: left;
+}
+
+.form-group label {
+    color: black;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Pay Now Button Styles */
+.pay-now {
+    display: inline-block;            /* Makes it behave like a button */
+    width: 100%;                     /* Full width */
+    padding: 12px;                   /* Padding for the button */
+    background-color: #007bff;      /* Blue background */
+    color: white;                    /* White text color */
+    text-align: center;              /* Center text */
+    text-decoration: none;           /* Remove underline from link */
+    border-radius: 4px;             /* Rounded corners */
+    font-size: 16px;                 /* Font size */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease; /* Smooth transitions */
+    cursor: pointer;                 /* Pointer cursor on hover */
+}
+
+.pay-now:hover {
+    background-color: #0056b3;      /* Darker blue on hover */
+    transform: scale(1.02);         /* Slightly scale up on hover */
+}
+
+.pay-now:active {
+    background-color: #004085;      /* Even darker blue on click */
+    transform: scale(0.98);         /* Slightly scale down on click */
+}
+
+/* Ensure the button has no default styles */
+#pay-button {
+    border: none;                   /* Remove default button border */
+    width: 100%;                   /* Full width to match the anchor */
+    background: transparent;       /* Transparent background */
+    color: inherit;                /* Inherit color from parent */
+    font-size: inherit;            /* Inherit font size from parent */
+    cursor: pointer;               /* Pointer cursor on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .payment-container {
+        max-width: 90%;
+    }
+
+    .card-details {
+        flex-direction: column;
+    }
+
+    .card-icons i {
+        font-size: 40px;
+    }
+}
+
+/* Payment Container Styles */
+.payment-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.payment-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Card Type Radio Buttons Styles */
+.card-Type {
+    display: flex; /* Use flexbox layout */
+    align-items: flex-start; /* Center items vertically */
+    justify-content: space-evenly; /* Align items to the left */
+    margin-bottom: 20px; /* Space below the card type section */
+    padding-left: 0%; /* Optional: adjust the left padding */
+}
+
+.card-Type label {
+    cursor: pointer; /* Change cursor to pointer */
+    display: flex; /* Flex display for the label */
+    align-items: center; /* Center items vertically within the label */
+    color: #333; /* Text color */
+    margin-right: 20px; /* Space between each radio button */
+}
+
+.card-Type input[type="radio"] {
+    margin-right: 5px; /* Space between radio button and its label */
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 30px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    max-width: 300px;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ff4040;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Social Media Icons */
+.social-media li {
+    display: inline;
+    margin-right: 10px;
+}
